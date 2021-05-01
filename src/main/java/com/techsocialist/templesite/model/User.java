@@ -1,34 +1,48 @@
-package com.techsocialist.model;
+package com.techsocialist.templesite.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 import java.util.UUID;
 
 @Entity
+@Table(name = "user", catalog = "", schema = "temple_sites")
 public class User {
 
     @Id
+    @Column(name = "uuid")
     private String uuid;
 
+    @Column(name = "firstname")
     private String firstName;
 
+    @Column(name = "lastname")
     private String lastName;
 
+    @Column(name = "username")
     private String userName;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "email_id", unique = true)
     private String emailId;
 
+    @Column(name = "mobile_no", unique = true)
     private String mobileNo;
 
+    @Column(name = "unique_id", unique = true)
     private String uniqueId;
 
+    @Column(name = "status")
     private String status;
 
+    @Column(name = "created_date")
     private Date createdDate;
 
+    @Column(name = "modified_date")
     private Date modifiedDate;
 
     public User(){
