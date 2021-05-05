@@ -1,6 +1,6 @@
-package com.techsocialist.templesite.dao;
+package com.techsocialist.templesites.dao;
 
-import com.techsocialist.templesite.model.User;
+import com.techsocialist.templesites.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, String> {

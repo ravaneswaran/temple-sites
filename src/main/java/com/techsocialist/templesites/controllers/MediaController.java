@@ -1,4 +1,4 @@
-package com.techsocialist.templesites.controller;
+package com.techsocialist.templesites.controllers;
 
 import org.springframework.stereotype.Controller;
 
