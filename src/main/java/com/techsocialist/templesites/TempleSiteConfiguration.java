@@ -1,4 +1,4 @@
-package com.techsocialist.templesite;
+package com.techsocialist.templesites;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
