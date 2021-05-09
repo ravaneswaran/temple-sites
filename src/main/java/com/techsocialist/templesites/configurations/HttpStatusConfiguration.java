@@ -1,4 +1,4 @@
-package com.techsocialist.templesites.configuration;
+package com.techsocialist.templesites.configurations;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;

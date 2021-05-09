@@ -1,4 +1,4 @@
-package com.techsocialist.templesites.configuration;
+package com.techsocialist.templesites.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

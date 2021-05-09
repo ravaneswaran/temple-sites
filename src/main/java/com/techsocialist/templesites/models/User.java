@@ -1,4 +1,4 @@
-package com.techsocialist.templesites.model;
+package com.techsocialist.templesites.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
