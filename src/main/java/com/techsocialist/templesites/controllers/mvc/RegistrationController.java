@@ -1,14 +1,17 @@
-package com.techsocialist.templesites.controllers;
+package com.techsocialist.templesites.controllers.mvc;
 
+import com.techsocialist.templesites.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.Date;
 
 @Controller
 public class RegistrationController {
+
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/registration/site")
     public String registerSite(
@@ -29,10 +32,7 @@ public class RegistrationController {
             @RequestParam(name="confirmPassword", required=false, defaultValue="")String confirmPassword,
             @RequestParam(name="mobileNo", required=false, defaultValue="")String mobileNo,
             @RequestParam(name="uniqueId", required=false, defaultValue="")String uniqueId,
-            @RequestParam(name="role", required=false, defaultValue="Site-Admin")String role,
-            Model model){
-
-        model.addAttribute("firstname", firstName);
+            @RequestParam(name="role", required=false, defaultValue="Site-Admin")String role){
 
         System.out.println("----------------------->>>>>> "+site);
         System.out.println("----------------------->>>>>> "+firstName);
@@ -45,7 +45,11 @@ public class RegistrationController {
         System.out.println("----------------------->>>>>> "+mobileNo);
         System.out.println("----------------------->>>>>> "+role);
 
-        return "registration";
+        Object returnVal = this.userService.saveUser(firstName, lastName, emailId, password, mobileNo, uniqueId, mobileNo, role);
+        if(null != returnVal){
+            return "registration";
+        } else {
+            return "test";
+        }
     }
-
 }

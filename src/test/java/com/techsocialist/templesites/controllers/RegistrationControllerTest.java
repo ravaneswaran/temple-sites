@@ -1,5 +1,6 @@
 package com.techsocialist.templesites.controllers;
 
+import com.techsocialist.templesites.controllers.mvc.RegistrationController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
