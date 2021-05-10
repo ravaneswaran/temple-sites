@@ -1,5 +1,6 @@
 package com.techsocialist.templesites.controllers;
 
+import com.techsocialist.templesites.AbstractTempleSitesTest;
 import com.techsocialist.templesites.controllers.mvc.RegistrationController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(RegistrationController.class)
-public class RegistrationControllerTest {
+public class RegistrationControllerTest extends AbstractTempleSitesTest {
 
     @Autowired
     private MockMvc mockMvc;
