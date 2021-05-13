@@ -9,8 +9,8 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login(
-            @RequestParam(name="userName", required=false, defaultValue="")String userName,
-            @RequestParam(name="password", required=false, defaultValue="")String password){
+            @RequestParam(name="userName", required=false, defaultValue="nouser")String userName,
+            @RequestParam(name="password", required=false, defaultValue="nopassword")String password){
         return null;
     }
 }
